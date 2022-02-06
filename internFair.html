@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <!-- <script src="scripts/events.js"></script> -->
+    <script src="scripts/internFair.js"></script>
+
+    <title>E SUMMIT</title>
+
+    <link
+      rel="icon"
+      href="images/Logo_outline.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/theme.css" /> -->
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- <link rel="stylesheet" href="swiper.min.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/internFair.css" />
+    <!-- <link href="scrollspy.css" rel="stylesheet" /> -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="css/navbarResponsive.css"
+    />
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .sortable-handler {
+        touch-action: none;
+      }
+      
+      *{
+          font-family:"Varela Round";
+      }
+
+      #container-fluid {
+        margin: 0;
+        padding-top: 3vh;
+        min-height: 60vh;
+        background: rgb(3, 20, 49);
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+      }
+
+      .container-fluid .card2 {
+        position: relative;
+        cursor: pointer;
+      }
+      .container-fluid .card2 .face {
+        width: 250px;
+        height: 200px;
+        transition: 0.5s;
+      }
+      .container-fluid .card2 .face.face1 {
+        position: relative;
+        background: #061d2e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(100px);
+      }
+      .container-fluid .card2:hover .face.face1.this1 {
+        /* transform: translateY(0px); */
+        background: #ff0057;
+      }
+      .container-fluid .card2:hover .face.face1.this2 {
+        /* transform: translateY(0px); */
+        background: #0073ff;
+      }
+      .container-fluid .card2:hover .face.face1.this3 {
+        /* transform: translateY(0px); */
+        background: #108c31;
+      }
+      .container-fluid .card2:hover .face.face1.this4 {
+        /* transform: translateY(0px); */
+        background: #c09e0a;
+      }
+      .container-fluid .card2 .face.face2 {
+        position: relative;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transform: translateY(-100px);
+      }
+      .container-fluid .card2:hover .face.face2 {
+        /* transform: translateY(0px); */
+      }
+      .container-fluid .card2 .face .face2 .content1 p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container-fluid .card2 .face.face1 .content1 {
+        opacity: 0.7;
+        transition: 0.5s;
+        color: #fff;
+      }
+      .container-fluid .card2:hover .face.face1 .content1 {
+        opacity: 1;
+      }
+      .container-fluid .card2 .face.face1 .content1 img {
+        max-width: 100px;
+      }
+      .container .card2 .face.face1 .content1 h3 {
+        margin: 10px 0 0;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+      }
+
+      #main-cell {
+        white-space: nowrap;
+        font-weight: 700;
+      }
+    </style>
+
+    <script>
+      window.addEventListener("wheel", { passive: false });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/da09e1c8d7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body
+    data-spy="scroll"
+    data-target=".navbar, #navbar-responsive"
+    data-offset="300"
+    onscroll="changeNavbar(0);"
+  >
+    <div id="header">
+      <nav id="navbar" class="navbar navbar-expand bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html#header"
+            ><img src="images/Logo_outline.png" alt=""
+          /></a>
+          <div class="main-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#header">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./workshops.html">Workshops</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./competitions.html">Competitions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./internFair.html"
+                  >Internfair</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#mymodal"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav id="navbar-responsive">
+        <div class="sidebar">
+          <!-- <span class="clsbtn"> -->
+          <a href="javascript:void(0)" class="clsbtn btn" onclick="clsNav()"
+            >x</a
+          >
+          <!-- </span> -->
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./workshops.html">Workshops</a>
+          <a class="nav-link" href="./competitions.html">Competitions</a>
+          <a class="nav-link active" href="./internFair.html">Internfair</a>
+          <a class="nav-link" href="./team.html">Team</a>
+          <a
+            class="nav-link"
+            href="#"
+            data-toggle="modal"
+            data-target="#mymodal"
+            >Contact Us</a
+          >
+        </div>
+        <button class="opnbtn btn" onclick="opnNav()">
+          <img src="./images/hamburger-icon" alt="" /><br /><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="mymodal">
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+      >
+        <div class="modal-content text-center">
+          <div class="modal-header d-block text-center">
+            <h5 class="modal-title">Contact Us</h5>
+          </div>
+          <div class="modal-body align-items-center">
+            <div id="cont-card" class="text-dark align-items-center">
+              <p>
+                Sponsorship and Association
+                <br />
+                <small><strong>Jaykar&emsp;</strong></small
+                ><a href="tel:8639208292"
+                  ><small
+                    id="phone"
+                    class="text-primary"
+                    onclick="copyToClipboard(this);"
+                    >91 86392 08292</small
+                  ></a
+                >
+              </p>
+              <p>
+                Registration
+                <br />
+                <small><strong>Bhanu&emsp;</strong> </small
+                ><a href="tel:7619605060"
+                  ><small
+                    id="phone"
+                    class="text-primary"
+                    onclick="copyToClipboard(this);"
+                    >+91 76196 05060</small
+                  ></a
+                >
+              </p>
+              <p>
+                For Speaking Opportunities
+                <br />
+                <small><strong>Akash Kothapally&emsp;</strong></small
+                ><a href="tel:8018087510"
+                  ><small
+                    id="phone"
+                    class="text-primary"
+                    onclick="copyToClipboard(this);"
+                    >+91 80180 87510</small
+                  ></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="internfair"
+      class="container-fluid text-center flex-wrap d-flex justify-content-around"
+    >
+      <div class="jumbotron mx-5 text-white">
+        <h1 class="display-4 mt-5">
+          <b
+            >S<small class="fw-normal fs-3">TARTUP</small>&nbsp;I<small
+              class="fw-normal fs-3"
+              >NTERNSHIP</small
+            >&nbsp;F<small class="fw-normal fs-3">AIR</small></b
+          >
+        </h1>
+        <p class="lead" style="text-align: justify">
+          Team E-Summit aims to connect startups with students through
+          internships. Working in a startup is a unique experience. We provide
+          you such an opportunity to explore work experience in a startup
+          through this Startup Internship Fair. Hurry up and register yourself
+          by uploading your cover letters/resumes.
+        </p>
+
+        <a class="btn btn-primary btn-lg " href="https://forms.gle/WYsAGaLofEHNUEZ5A" role="button"
+          >Register here</a
+        >
+
+        <hr class="my-4" />
+      </div>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="customModal">
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title" id="myModalTitle"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              style="background-color: white; border: 0; padding: 0; outline: 0"
+            >
+              <span aria-hidden="true" style="font-size: 25px">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="position-i" class="text-dark py-1"></div>
+            <div id="eligibility-i" class="text-dark py-1"></div>
+            <div id="stipend-i" class="text-dark py-1"></div>
+            <div id="person-i" class="text-dark py-1"></div>
+            <div id="phone-i" class="text-dark py-1"></div>
+            <div id="email-i" class="text-dark py-1"></div>
+            <div id="misc-i" class="text-dark py-1"></div>
+            <div id="skills-i" class="text-dark py-1"></div>
+            <div id="num-i" class="text-dark py-1"></div>
+          </div>
+          <div class="text-center py-1">
+            <a href="https://forms.gle/WYsAGaLofEHNUEZ5A" class="btn btn-primary text-white text-align-center"
+              >Register</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function showMyModalSetTitle(
+        myTitle,
+        position,
+        eligibility,
+        stipend,
+        person,
+        phone,
+        email,
+        misc,
+        skills,
+        num
+      ) {
+        $("#myModalTitle").html(myTitle);
+        $("#position-i").html("<b>Intern position(s) :&nbsp;</b>" + position);
+        $("#eligibility-i").html(
+          "<b>Eligibility criteria for applicants :&nbsp;</b>" + eligibility
+        );
+        $("#stipend-i").html("<b>Stipend per month :&nbsp;</b>" + stipend);
+        // $("#person-i").html(
+        //   "<b>Person to contact/ HR representative :&nbsp;</b>" + person
+        // );
+        // $("#phone-i").html("<b>Contact number :&nbsp;</b>" + phone);
+        // $("#email-i").html("<b>E-mail ID :&nbsp;</b>" + email);
+        $("#misc-i").html(
+          "<b>Other information/requirement :&nbsp;</b>" + misc
+        );
+        $("#skills-i").html("<b>Required skills :&nbsp;</b>" + skills);
+        $("#num-i").html("<b>Number of intern offers :&nbsp;</b>" + num);
+
+        $("#customModal").modal("show");
+      }
+    </script>
+
+    <div
+      class="container-fluid"
+      id="container-fluid"
+      style="padding-bottom: 8vh"
+    >
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('Learnweel', 'Market Research, HR, Business Development, Digital Marketing, Graphics Design, Content Writing','N/A','No stipend','Gourav Sharma','7873287132','gourav.s.learnweel@gmail.com','N/A','Proficiency in English, MS - Office, Adobe and Canva (Applicable only for graphics design), SEO, Knowledge about social media (Applicable only for digital marketing)','20-30')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 15px"
+                >
+                  <b style="font-size: 20px">Learnweel</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Pune</b
+                  ><br />
+                  Market Research, HR, Business Development, Digital Marketing,
+                  Graphics Design, Content Writing
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >Proficiency in English, MS - Office, Adobe and Canva
+                  (Applicable only for graphics design), SEO, Knowledge about
+                  social media (Applicable only for digital marketing) </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('Print Casual Brands Pvt. Ltd.', 'Digital Marketing, Fashion Designer, Marketing.','Graduation(Pursuing/completed)','3000-6000','Tanya Chauhan','7838602023','info@delhiexportcompany.com','In office internship','As per position','5')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Print Casual Brands Pvt. Ltd.</b
+                  ><br /><b><i class="fas fa-map-marker-alt"></i>&nbsp;Noida</b
+                  ><br />
+                  Digital Marketing, Fashion Designer, Marketing.
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">As per position </b><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px">In office internship </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this3"
+              onclick=" javascript:showMyModalSetTitle('Oretes Consulting Pvt Ltd', 'Web Development in PHP,Web Development in Python Django or Flask, Digital Marketing,Android Development, Blockchain developer','3rd and 5th Semesters in B.Tech CSE','2000','Shubham Mohapatra','8018481485','careers@oretes.com','Should Available for 90 Days at Oretes Bhubaneswar Office','Android, ML, Python, React, AR/VR','9(2 positions for each of Web Development in PHP, Web Development in Python Django or Flask, Digital Marketing, Android Development and 1 position for Blockchain Developer)')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Oretes Consulting Pvt Ltd</b
+                  ><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Bhubaneswar</b
+                  ><br />
+                  Web Development in PHP,Web Development in Python Django or Flask, Digital Marketing, Android Development, Blockchain developer
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >Android, ML, Python, React, ARVR </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >Should be Available for 90 Days at Oretes Bhubaneswar Office </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this4"
+              onclick=" javascript:showMyModalSetTitle('Interview Cracker', 'Business development executive','Interest to become an entrepreneur, want to work in startup ecosystem and wants to go for MBA to learn customer interaction skills','15k-25k','Anupma Singh','9886102380','knowledge@interviewcracker.com','We are looking for last year/final semester students, who we can employee after 2 months.','Good communication, ready to work in business development role, want to make some dent in the universe','10')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Interview Cracker</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Bangalore</b
+                  ><br />
+                  Business development executive
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >good communication,ready to work in business development role </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px">
+                  final semester students to be employed after 2 months. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('Brainstormer\'s Solution', 'Graphic Designer','Must have knowledge of Graphic designer. Marathi reading/writing/speaking mandatory','5000-9000','Samruddhi Patil','8828480439','contact@brainstormers.co.in','contact@brainstormers.co.in','No','5')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Brainstormer's Solution</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Mumbai </b
+                  ><br />
+                  Graphic Designer
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">Graphic designing </b
+                ><br /><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('Pytheos Health Systems Private Limited', 'Software Developer( Android, Back-end, Front-end)','90%','8000','Shruthi B S','8088170179','shruthi@humanfractal.io','Engineering','Coding','1')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px"
+                    >Pytheos Health Systems Private Limited</b
+                  ><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Bengaluru,
+                    Karnataka</b
+                  ><br />
+                  Software Developer( Android, Back-end, Front-end)
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">Coding </b><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px">Engineering </b><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this3"
+              onclick=" javascript:showMyModalSetTitle('Workcave Coworking','Operations Manager','ust be available for full time in office internship for 6 months','5000-10000 (depending on role)','Vidur','9899164976','info@workcave.in','Candidate should be present in Chandigarh. Should have laptop and mobile.','Excellent english speaking, english writing, MS office knowledge','5')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Workcave Coworking</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Chandigarh</b
+                  ><br />
+                  Operations Manager
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >Excellent english speaking, english writing, MS office
+                  knowledge, </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >Candidate should be present in Chandigarh. Should have laptop
+                  and mobile. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this4"
+              onclick=" javascript:showMyModalSetTitle('NinthSem', 'Business Development Associate(BDA), Sales Associate (SA), Campus Ambassador(CA), HR Associate, Marketing Associate','B.E/B.Tech/MBA(Preferred)','Performance Based','Surya Narayan Kar','9437855859','surya@gmail.com','N/A','As per the positions','38')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">NinthSem</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Bhubaneswar</b
+                  ><br />
+                  Business Development Associate(BDA), Sales Associate (SA),
+                  Campus Ambassador(CA), HR Associate, Marketing Associate
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">As per the positions </b
+                ><br /><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('Pa Say webscript Technologies Pvt Ltd','', 'UG or PG','Performance base','Yogesh','09893222186','info@pasesoftech.com','wfh or  online  internship','IT & Non IT','5')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px"
+                    >Pa Say webscript Technologies Pvt Ltd</b
+                  ><br /><b><i class="fas fa-map-marker-alt"></i>&nbsp;Bhopal</b
+                  ><br />
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">IT & Non IT </b><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px">wfh or online internship </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('MeritHub Technologies Pvt Ltd', 'Growth Hackers - Sales and Customer Support','Excellent Communication and Demonstration skills','10 Fix + 10K Quota Based Variable per Month','Gurjinder Singh','09815174050','gurjinder@merithub.com','You will be talking to EdTech CEOs around the world.','Fluent in English, Ability to speak with native english speakers ','10')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">MeritHub Technologies Pvt Ltd</b
+                  ><br /><b><i class="fas fa-map-marker-alt"></i>&nbsp;Mohali</b
+                  ><br />
+                  Growth Hackers - Sales and Customer Support
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >Fluent in English, Ability to speak with native english
+                  speakers </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px">
+                  You will be talking to EdTech CEOs around the world. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this3"
+              onclick=" javascript:showMyModalSetTitle('E-panipurii kartz', '','Graduate & above','10000','6355472303','hr@shrinesoft.com','Good in programming skills like Java and C++','Mechnical/Electrical testing tool , Software  development','Frontend/ backend , API Integration','4')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">E-panipurii kartz</b
+                  ><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Bhubneshwar</b
+                  ><br />
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">Java,C++, </b><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >Good in programming skills like Java and C++ </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this4"
+              onclick=" javascript:showMyModalSetTitle('Saimag Systems', 'Marketing, Business Development, Technical','good computer knowledge and communication skills','5000- 10,000 INR','Aanya','9820065428','aanyalalchandani@gmail.com','Should be active in social media','Expert on social media, should know digital marketing','5')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Saimag Systems</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Mumbai</b
+                  ><br />
+                  Marketing, Business Development, Technical
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >expert on social media, should know digital marketing </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >should be active in social media </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('The Contrast', 'Sales and Marketing','Degree','5000','Mahadev Gitte','8108684673','mahadev@thecontrast.in','No','Good knowledge of Sales and marketing','10')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">The Contrast</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Mumbai</b
+                  ><br />
+                  Sales and Marketing
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >Good knowledge of Sales and marketing </b
+                ><br />
+                <br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('Rankraze Technologies Pvt Ltd','Digital marketing intern ','Knowledge on marketing , social media ','5000 - 8000','Raja','09710079798','Hr@rankraze.com','Info@rankraze.com','Seo google ads smm ','5')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Rankraze Technologies Pvt Ltd</b
+                  ><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Chennai</b
+                  ><br />
+                  Digital marketing intern
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">Seo google ads smm </b><br />
+                <br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center">
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('Mindstix Software Labs Private Limited','Web and mobile development', 'Students pursing B.E. Electronics and Telecommunication Engineering / B.E. Computer Engineering / B.E. IT Engineering / Masters in Computer Engineering / Masters in IT Engineering. ','Rs 16000',' What We Offer:Working on cross-platform technologies Building cloud-native applications An informal working environment + Collaborative workspace Platform for creativity + learning + growth opportunities','Suman Kumari','','What We Offer:Working on cross-platform technologies Building cloud-native applications An informal working environment + Collaborative workspace Platform for creativity + learning + growth opportunities','Our Requirements:Strong in programming and logic, Good English speaking and writing skills,Open to work under assigned technology,Students with 1-2 backlogs can apply (No percentage cut-off criteria)','5',)"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Mindstix Software Labs Private Limited</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Pune</b><br />
+                    Web and mobile development
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 10px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 8px"
+                  >MS Excel MS PowerPoint , MS Word, Adobe Creative, CorelDRAW,
+                  CSS, HTML, Java/JavaScipt, PHP, REST API, XML, MySQL, Search
+                  Engine Optimizaton, Google/Facebook Ads, Figma </b
+                ><br />
+                <b style="font-size: 10px; text-align: center"
+                  ><a
+                    style="text-decoration: none"
+                    href="     https://docs.google.com/forms/d/e/1FAIpQLSfMh-64kOB6CrwZsLyXAcpH-Ji_ZxqEgu02tebmIOT4t3Bjdw/viewform?usp=sf_link"
+                    >Fill the form</a
+                  ></b
+                ><br /><b style="font-size: 8px"> </b><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this4"
+              onclick=" javascript:showMyModalSetTitle('Krishiyog', 'Operations, Social Media Marketing, Sales, Analytics','based on the position, 2nd or 3rd year graduates','6k-12k','Ashwin','9100757572','ashwin@krishiyog.in','Resumes','zeal for startup and willingness to learn','4')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Krishiyog</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                  Operations, Social Media Marketing, Sales, Analytics
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >zeal for startup and willingness to learn </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px">Resumes </b><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('AVIPL', 'Full Stack Web Developer','No Backlogs at least 7.0 CGPA','nil','Harsh Sharma','7976391232','e-businessinnovator@avipl.in','Must have good communication skills and the intern must be disciplined person.','Must have sharp knowledge of HTML,CSS,JS, MONGODB, REACTJS AND NODEJS','6')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">AVIPL</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Delhi NCR</b
+                  ><br />
+                  Full Stack Web Developer
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >Must have sharp knowledge of HTML,CSS,JS, MONGODB, REACTJS
+                  AND NODEJS </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >Must have good communication skills and the intern must be
+                  disciplined person. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('MentorMitr', 'Business Development, Designers & Operations Intern(s)','Resume, Experience in the respective field(s), Portfolio of work (Designers) ','3000-5000 per month ','Vridhi','7836885527','vridzzz@gmail.co.','Pursuing/Completed Bachelor’s Degree in any field ','Skills relevant to positions, respectively ','2-3')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">MentorMitr</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Gurgaon</b
+                  ><br />
+                  Business Development, Designers & Operations Intern(s)
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >Skills relevant to positions, respectively </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >Pursuing/Completed Bachelor’s Degree in any field </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this3"
+              onclick=" javascript:showMyModalSetTitle('Metriculus Digital Media', 'Full Stack Web Developer','FullStack JD','15000+performance bonus','swaja@metriculus.com','9267915855','contact@metriculus.com','none','Full Stack JD','2')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Metriculus Digital Media</b
+                  ><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;New Delhi</b
+                  ><br />
+                  Full Stack Web Developer
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">Full Stack JD </b><br />
+                <br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+         <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"    >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('Design Noise', 'Web and Android App Development, Business Development, Social Media Marketing, Market Research, Video Editor/Making, Content Writing, Strategy and Planning Management','Minimum GPA of 2.5, Familiar with technical skills required for each job role, Strong verbal and written communication, Excellent analytical and problem-solving skills,	Organizational and leadership skills,	Excellent communication skills,	He or she must be willing to learn about the company, the industry, the work environment, and the technical and functional aspects of the job, Strong work ethic and attention to detail.','5000 - 15000 INR','Suman Kumari','8298856159','hr@designnoise.in','','MS Excel, MS PowerPoint , MS Word, Adobe Creative, CorelDRAW, CSS, HTML, Java, JavaScipt, PHP, REST API, XML, MySQL, Search Engine Optimizaton, Google or Facebook Ads, Figma, Others','10 interns in each position offered.')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 10px"
+                >
+                  <b style="font-size: 18px">Design Noise</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                  Android App Development, Web Development, Business
+                  Development, Social Media Marketing, Market Research Intern,
+                  Video Editor/Making, Content Writing, Strategy and Planning
+                  Management
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 10px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 8px"
+                  >MS Excel MS PowerPoint , MS Word, Adobe Creative, CorelDRAW,
+                  CSS, HTML, Java/JavaScipt, PHP, REST API, XML, MySQL, Search
+                  Engine Optimizaton, Google/Facebook Ads, Figma </b
+                ><br />
+                <b style="font-size: 10px; text-align: center"
+                  ><a
+                    style="text-decoration: none"
+                    href="     https://docs.google.com/forms/d/e/1FAIpQLSfMh-64kOB6CrwZsLyXAcpH-Ji_ZxqEgu02tebmIOT4t3Bjdw/viewform?usp=sf_link"
+                    >Fill the form</a
+                  ></b
+                ><br /><b style="font-size: 8px"> </b><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('IIIRPD', 'MATLAB Application Development','MATLAB','6000','Mounica','9962711123','info.iiirpd@gmail.com','If taking the stipend as lump-sum then the payment is 20,000.','MATLAB','2')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">IIIRPD</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                  MATLAB Application Development
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">MATLAB </b><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >If taking the stipend as lump-sum then the payment is 20,000. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('IIIRPD', 'Embedded Systems Tutoring','Digital Marketing;Embedded Systems; Arduino ;Internet of Things (IoT); Proteus Design Suite.','3000','Mounica','9962711123','info.iiirpd@gmail.com','If taking the stipend lump-sum then it would be 10,000 for 3 months.','Digital Marketing;Embedded Systems; Arduino ;Internet of Things (IoT); Proteus Design Suite.','2')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">IIIRPD</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad </b
+                  ><br />
+                  Embedded Systems Tutoring
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <br /><b style="font-size: 10px"
+                  >Digital Marketing;Embedded Systems; Arduino ;Internet of
+                  Things (IoT); Proteus Design Suite. </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >If taking the stipend lump-sum then it would be 10,000 for 3
+                  months. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this3"
+              onclick=" javascript:showMyModalSetTitle('IIIRPD', 'Unity Software Development','Only those candidates can apply who:  1. are available for full time (in-office) internship  2. can start the internship between 17th Feb21 and 24th Mar21  3. are available for duration of 6 months  4. are from Hyderabad and neighboring cities  5. have relevant skills and interests','Only those candidates can apply who:  1. are available for full time (in-office) internship  2. can start the internship between 17th Feb21 and 24th Mar21  3. are available for duration of 6 months  4. are from Hyderabad and neighboring cities  5. have relevant skills and interests','Mounica','9962711123','info.iiirpd@gmail.com','If taking lump-sum then the total stipend for Six months would be 30,000-40,000.','C#; Unity 3D; C Programming; Unity Engine.','2')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">IIIRPD</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                  Unity Software Development
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >C#; Unity 3D; C Programming; Unity Engine. </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >If taking lump-sum then the total stipend for Six months
+                  would be 30,000-40,000. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this4"
+              onclick=" javascript:showMyModalSetTitle('IIIRPD', 'Python Development Internship','Only those candidates can apply who:  1. are available for full time (in-office) internship  2. can start the internship between 17th Feb21 and 24th Mar21  3. are available for duration of 6 months  4. are from Secunderabad, Hyderabad and neighboring cities  5. have relevant skills and interests','1800-3200','Mounica','9962711123','info.iiirpd@gmail.com','If taking the stipend as lump-sum it would be 12,000-22,000 for 6 months.','C#, Python','2')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">IIIRPD</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                  Python Development Internship
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px">C#,Python </b><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >If taking the stipend as lump-sum it would be 12,000-22,000
+                  for 6 months. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('IIIRPD', 'Mechatronics Internship','Selected interns day-to-day responsibilities include:  1. Work on 3D modeling of robots 2. Work on kinematic analysis of robots 3. Conduct experiments & research analysis 4. Conduct research writing 5. Prepare PowerPoint presentations','4500','Mounica','9962711123','info.iiirpd@gmail.com','If taking stipend as lemp-sum then it would be 15000 for 3 months','MATLAB ,Python,SolidWorks, Robotics,   Raspberry Pi,Embedded Systems,Autodesk Fusion 360','2')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">IIIRPD</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                  Mechatronics Internship
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >MATLAB, Python, SolidWorks, Robotics, Raspberry Pi, Embedded
+                  Systems, Autodesk Fusion 360 </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >If taking stipend as lemp-sum then it would be 15000 for 3
+                  months </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this2"
+              onclick=" javascript:showMyModalSetTitle('IIIRPD', 'Business Development','1. Promoting offline sales for our products 2. Developing sales and marketing strategy for our company 3. Promoting our product and brand through various mediums','9000','Mounica','9962711123','info.iiirpd@gmail.com','If taking the stipend as lump-sum the the payment would be 30,000 for a duration of 3 months.','Social Media Marketing, Search Engine Marketing, Digital Marketing, Facebook Marketing, E-mail Marketing, Instagram Marketing','6')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">IIIRPD</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad </b
+                  ><br />
+                 Business Development
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 10px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 8px"
+                  >Social Media Marketing, Search Engine Marketing (SEM),
+                  Digital Marketing, Facebook Marketing, Email Marketing,
+                  Instagram Marketing </b
+                ><br />
+                <b style="font-size: 10px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 8px"
+                  >If taking the stipend as lump-sum the the payment would be
+                  30,000 for a duration of 3 months. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this3"
+              onclick=" javascript:showMyModalSetTitle('IIIRPD', 'Robotics Research Internship','1. Study robotic relevant research article and formulate the research problems 2. Create robots in the lab and perform experiments 3. Write research papers in the field of robotics 4. Create PowerPoint presentations and video presentations on the research work 5. Interact with professors from various countries who are working in the field of robotics','6000-7000','Mounica','9962711123','info.iiirpd@gmail.com','If taking the stipend as lump-sum then it would be 40000-50000 for a duration of 6 months','SolidWorks, Robotics, Raspberry Pi, Embedded systems, Internet of things(IOT), Artificial Intelligence','2')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">IIIRPD</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                  Robotics Research Internship
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 10px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 8px"
+                  >SolidWorks Robotics Raspberry Pi Embedded Systems Internet of
+                  Things (IoT) Artifical Intelligence </b
+                ><br />
+                <b style="font-size: 10px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 8px"
+                  >If taking the stipend as lump-sum the the payment would be
+                  30,000 for a duration of 3 months. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInRight" data-wow-duration="1s">
+            <div
+              class="face face1 this4"
+              onclick=" javascript:showMyModalSetTitle('', 'Interest in gaming','zero','Raunak Bagga','8121926320','raunak@koolgen.com','We have Openings for Content writers for writing about latest trends in gaming industry, We have opening for Game Developers - Unity or Unreal Engine (As its free we will train them in this technologies for the same), We have opening for Game Designers- As its free internship, we will train them in this and increase their capabilities for the same','1- Interest in Gaming - [For Game Designer and Content Writers], 2- Object Oriented Programing Knowledge - [For Game Developers]','3-6')"
+            >
+              <div class="content1">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px"
+                    >Nextgen Studios- An Initiative of koolgen Groups</b
+                  ><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Hyderabad</b
+                  ><br />
+                 
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 10px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 8px"
+                  >SolidWorks Robotics Raspberry Pi Embedded Systems Internet of
+                  Things (IoT) Artifical Intelligence </b
+                ><br />
+                <b style="font-size: 10px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 8px"
+                  >If taking the stipend as lump-sum the the payment would be
+                  30,000 for a duration of 3 months. </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div
+          class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center"
+        >
+          <div class="card2 wow slideInLeft" data-wow-duration="1s">
+            <div
+              class="face face1 this1"
+              onclick=" javascript:showMyModalSetTitle('Knowlexon Innovation and Technology pvt ltd', 'Tech and marketing intern, Android Development','BTech, for sales - MBA or BBA','2500 + incentives, 9k for Android development intern','Mounica','9962711123','info.iiirpd@gmail.com','Technology and Marketing','Technologies - php,database,wordpress and laveral Marketing -Excel,Mindmapping,email,ms word,powerpoint,telecalling ','4')"
+            >
+              <div class="content1" style="align-items: center">
+                <p
+                  class="card-text"
+                  style="text-align: center; font-size: 13px"
+                >
+                  <b style="font-size: 18px">Knowlexon Innovation and Technology pvt ltd</b><br /><b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Bangalore</b
+                  ><br />
+                  <b
+                    ><i class="fas fa-map-marker-alt"></i>&nbsp;Bhubaneswar</b
+                  ><br />
+                  Tech and Marketing Internship
+                  <br />
+                  Android Developer
+                </p>
+              </div>
+            </div>
+            <div class="face face2">
+              <p style="text-align: center">
+                <b style="font-size: 13px; text-align: center"
+                  >Required Skills</b
+                ><br /><b style="font-size: 10px"
+                  >MATLAB, Python, SolidWorks, Robotics, Raspberry Pi, Embedded
+                  Systems, Autodesk Fusion 360 </b
+                ><br />
+                <b style="font-size: 13px; text-align: center">Other Info</b
+                ><br /><b style="font-size: 10px"
+                  >If taking stipend as lemp-sum then it would be 15000 for 3
+                  months </b
+                ><br />
+
+                <a href="#" class="btn btn-warning text-white text-align-center"
+                  >Register</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="bg-dark">
+      <img src="./graphic imgs/contact5.png" alt="" class="foot-graphic" />
+      <div id="line-1">
+        <div id="footer-img">
+          <img src="images/Logo_outline.png" />
+        </div>
+        <div id="footer-text" class="text-white">
+          <strong>E-Summit 21</strong>
+          <br />
+          <span style="font-size: 18px">IIT Bhubaneshwar</span>
+        </div>
+      </div>
+      <div id="sm-icons">
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/centrepreneurship/"
+              target="_blank"
+              ><i class="fa fa-facebook" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/centrepreneurship/"
+              target="_blank"
+              ><i class="fa fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/e-summit-iit-bhubaneswar/"
+              target="_blank"
+              ><i class="fa fa-linkedin" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UC3gKo28mm66VcJs-vsFggZg"
+              target="_blank"
+              ><i class="fa fa-youtube" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="line-3">
+        <div id="q-links" class="text-white">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./sponsors.html" target="_blank">Sponsors</a></li>
+            <li>
+              <a href="https://ca.e-summit-iitbbs.com/" target="_blank"
+                >CA Page</a
+              >
+            </li>
+            <li><a href="./index.html#events" target="_blank">Events</a></li>
+            <li>
+              <a href="./competitions.html" target="_blank">Competitions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

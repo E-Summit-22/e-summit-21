@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <title>E SUMMIT</title>
+
+    <link
+      rel="icon"
+      href="images/Logo_outline.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/theme.css" /> -->
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- <link rel="stylesheet" href="swiper.min.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/contests.css" />
+    <!-- <link href="scrollspy.css" rel="stylesheet" /> -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="css/navbarResponsive.css"
+    />
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .sortable-handler {
+        touch-action: none;
+      }
+      #team {
+        background-color: rgb(3, 20, 49);
+      }
+
+      .cards {
+        position: relative;
+        width: 330px;
+        height: 300px;
+        background: #104c64;
+       /* margin: 30px 10px;*/
+       margin-top:30px;
+       margin-bottom:20px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+        border-radius: 15px;
+      }
+      .cards:hover {
+        height: 380px;
+        box-shadow: 8px 10px 20px -10px rgb(204, 187, 187);
+      }
+      .cards .imgBx {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        top: -60px;
+        left: 20px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      }
+      .cards .imgBx img {
+        max-width: 100%;
+        border-radius: 15px;
+      }
+      .cards .content {
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+      .cards:hover .content {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s;
+        padding-top: 45px;
+        color: white;
+      }
+    </style>
+
+    <script>
+      window.addEventListener("wheel", { passive: false });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/da09e1c8d7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body
+    data-spy="scroll"
+    data-target=".navbar, #navbar-responsive"
+    data-offset="300"
+    onscroll="changeNavbar(0);"
+  >
+    <div id="header">
+      <nav id="navbar" class="navbar navbar-expand bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html#header"
+            ><img src="images/Logo_outline.png" alt=""
+          /></a>
+          <div class="main-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#header">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./workshops.html">Workshops</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./competitions.html">Competitions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./internFair.html">Internfair</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#mymodal"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav id="navbar-responsive">
+        <div class="sidebar">
+          <!-- <span class="clsbtn"> -->
+          <a href="javascript:void(0)" class="clsbtn btn" onclick="clsNav()"
+            >x</a
+          >
+          <!-- </span> -->
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./workshops.html">Workshops</a>
+          <a class="nav-link" href="./competitions.html">Competitions</a>
+          <a class="nav-link" href="./internFair.html">Internfair</a>
+          <a class="nav-link active" href="./team.html">Team</a>
+          <a
+            class="nav-link"
+            href="#"
+            data-toggle="modal"
+            data-target="#mymodal"
+            >Contact Us</a
+          >
+        </div>
+        <button class="opnbtn btn" onclick="opnNav()">
+          <img src="./images/hamburger-icon" alt="" /><br /><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="mymodal">
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+      >
+        <div class="modal-content text-center">
+          <div class="modal-header d-block text-center">
+            <h5 class="modal-title">Contact Us</h5>
+          </div>
+          <div class="modal-body align-items-center">
+            <div id="cont-card" class="text-dark align-items-center">
+              <p>
+                Sponsorship and Association
+                <br />
+                <small><strong>Jaykar&emsp;</strong></small
+                ><a href="tel:8639208292"
+                  ><small
+                    id="phone"
+                    class="text-primary"
+                    onclick="copyToClipboard(this);"
+                    >91 86392 08292</small
+                  ></a
+                >
+              </p>
+              <p>
+                Registration
+                <br />
+                <small><strong>Bhanu&emsp;</strong> </small
+                ><a href="tel:7619605060"
+                  ><small
+                    id="phone"
+                    class="text-primary"
+                    onclick="copyToClipboard(this);"
+                    >+91 76196 05060</small
+                  ></a
+                >
+              </p>
+              <p>
+                For Speaking Opportunities
+                <br />
+                <small><strong>Akash Kothapally&emsp;</strong></small
+                ><a href="tel:8018087510"
+                  ><small
+                    id="phone"
+                    class="text-primary"
+                    onclick="copyToClipboard(this);"
+                    >+91 80180 87510</small
+                  ></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="team"
+      class="container-fluid text-center flex-wrap d-flex justify-content-around"
+    >
+      <div class="jumbotron mx-5 text-white">
+        <h1 class="display-4 mt-5"><b>Meet The Team</b></h1>
+        <hr class="my-4" />
+      </div>
+      <div class="container-fluid p-5 mt-5" style="height: auto">
+        <div
+          class="row justify-content-center align-items-center"
+          style="align-items: center"
+        >
+          <div
+            class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/mam.png" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 25px">Chairman</span><br />Dr.Madhusmita Dash<br /><span style="font-size: 15px"
+                    >chairman.esummit@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/sir.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 25px">Vice-Chairman</span><br />Dr.Rajakumar Guduru<br /><span style="font-size: 15px"
+                    >vicechairman.esummit@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid p-5 mt-5" style="height: auto">
+        <div
+          class="row justify-content-center align-items-center"
+          style="align-items: center"
+        >
+          <div
+            class="col-12 col-lg-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/Akash.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 25px">Co-ordinator</span><br />Akash Kottapally<br /><span style="font-size: 1em">
+                    <a href="https://www.facebook.com/kothapallyakash2001"
+                      ><i
+                        class="fa fa-facebook"
+                        style="padding-right: 1em; color: white"
+                      ></i
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/in/kothapally-akash-37ba501a6/"
+                    >
+                      <i
+                        class="fa fa-linkedin"
+                        style="padding-right: 1em; color: white"
+                      ></i
+                    ></a>
+
+                    <a href="coord.esummit@iitbbs.ac.in">
+                      <i
+                        class="fa fa-at"
+                        style="padding-right: 1em; color: white"
+                      ></i
+                    ></a>
+                  </span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid p-5 mt-5" style="height: auto">
+        <div
+          class="row justify-content-center align-items-center"
+          style="align-items: center"
+        >
+          <div
+            class="col-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/Jayakar.jpeg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 22px">Marketing Coordinator</span
+                  ><br />Jayakar Karri<br /><span style="font-size: 13px"
+                    >ksr12@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/Sravya.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 22px">Marketing Coordinator</span
+                  ><br />Sravya Ghadamsetty<br /><span style="font-size: 13px"
+                    >sg49@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/Harsha.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 22px">Publicity Coordinator</span
+                  ><br />Harshavardhana Naidu<br /><span style="font-size: 13px"
+                    >rhn10@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx" style="z-index: 1;">
+                <img src="img/AkashN.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 22px">Publicity Coordinator</span
+                  ><br />Akash Narayanasetti<br /><span style="font-size: 13px"
+                    >na13@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid p-5 mt-5 mb-5" style="height: auto">
+        
+        <div
+          class="row justify-content-center align-items-center"
+          style="align-items: center"
+        >
+        
+          <div
+            class="col-12 col-md-6 col-xl-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/Chakri.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 22px">Events Coordinator</span
+                  ><br />Chakradhar Suraparaju<br /><span style="font-size: 13px"
+                    >sc32@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+          class="col-12 col-md-6 col-xl-3 d-flex justify-content-center align-items-center"
+        >
+          <div class="cards">
+            <div class="imgBx">
+              <img src="img/" />
+            </div>
+            <div class="content">
+              <h2 style="font-size: 20px">
+                <span style="font-size: 22px">Events Coordinator</span
+                ><br />Poornima Kadukuntla<br /><span style="font-size: 13px"
+                  >kp24@iitbbs.ac.in</span
+                >
+              </h2>
+            </div>
+          </div>
+        </div>
+          <div
+            class="col-12 col-md-6 col-xl-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/bhanu.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 22px">Web Coordinator</span
+                  ><br />Bhanu Prakash Ramineni<br /><span
+                    style="font-size: 13px"
+                    >rbp10@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col-xl-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="cards">
+              <div class="imgBx">
+                <img src="img/Anirudh.jpg" />
+              </div>
+              <div class="content">
+                <h2 style="font-size: 20px">
+                  <span style="font-size: 22px">Design Coordinator</span
+                  ><br />Anirudh Manikonda<br /><span style="font-size: 13px"
+                    >ma21@iitbbs.ac.in</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="bg-dark">
+      <img src="./graphic imgs/contact5.png" alt="" class="foot-graphic" />
+      <div id="line-1">
+        <div id="footer-img">
+          <img src="images/Logo_outline.png" />
+        </div>
+        <div id="footer-text" class="text-white">
+          <strong>E-Summit 21</strong>
+          <br />
+          <span style="font-size: 18px">IIT Bhubaneshwar</span>
+        </div>
+      </div>
+      <div id="sm-icons">
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/centrepreneurship/"
+              target="_blank"
+              ><i class="fa fa-facebook" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/centrepreneurship/"
+              target="_blank"
+              ><i class="fa fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/e-summit-iit-bhubaneswar/"
+              target="_blank"
+              ><i class="fa fa-linkedin" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UC3gKo28mm66VcJs-vsFggZg"
+              target="_blank"
+              ><i class="fa fa-youtube" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="line-3">
+        <div id="q-links" class="text-white">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./sponsors.html" target="_blank">Sponsors</a></li>
+            <li>
+              <a href="https://ca.e-summit-iitbbs.com/" target="_blank"
+                >CA Page</a
+              >
+            </li>
+            <li><a href="./index.html#events" target="_blank">Events</a></li>
+            <li>
+              <a href="./competitions.html" target="_blank">Competitions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const changeNavbar = (flag) => {
+        // console.log("here");
+        var nav = document.querySelector("nav");
+        var reqHt = nav.offsetHeight;
+        var navarray = document.getElementsByClassName("nav-item");
+
+        var mainNav = document.querySelector(".main-nav");
+        var navBarNav = document.querySelector(".navbar-nav");
+        var navreg = document.querySelector(".nav-register");
+
+        // var regbtn = document.querySelector(".header-text").querySelector(".btn");
+        if (window.pageYOffset < reqHt) {
+          nav.setAttribute("style", "background:transparent !important;");
+
+          var i;
+          var rate = 0.25;
+
+          if (navreg) {
+            navreg.remove();
+          }
+          for (i = 5; i >= 0; i--) {
+            navarray[i].setAttribute(
+              "style",
+              "transform:translateX(0vw); transition-delay:" + rate + "s"
+            );
+            rate -= 0.05;
+          }
+
+          //   regbtn.setAttribute("style", "opacity:1;display:block");
+        } else {
+          if (navreg == null || flag === 1) {
+            if (flag === 0) {
+              var node = document.createElement("LI");
+              node.classList.add("nav-register");
+
+              var nodeC = document.createElement("A");
+              nodeC.classList.add("btn");
+
+              nodeC.setAttribute("href", "https://dare2compete.com/f/e-summit-2021-indian-institute-of-technology-iit-bhubaneswar-9856");
+              nodeC.setAttribute("target","_blank");
+
+              var textnode = document.createTextNode("Register");
+              nodeC.appendChild(textnode);
+              node.appendChild(nodeC);
+              navBarNav.appendChild(node);
+              // node.setAttribute("style", "visibility: visible;opacity:1");
+            } else {
+              node = document.querySelector(".nav-register");
+            }
+
+            nav.setAttribute(
+              "style",
+              "background:url(images/ad47af29ad50df1477b9413f9d521db0.jpg) \
+          !important; box-shadow: rgb(0, 0, 0) 2px 2px 25px;"
+            );
+
+            let a = nav.offsetWidth;
+
+            let b = 0;
+            for (var i = 5; i >= 0; i--) {
+              b += navarray[i].offsetWidth;
+            }
+
+            let c = node.offsetWidth;
+
+            let w = (a - b) / 2 - c;
+
+            var rate = 0;
+
+            for (var i = 5; i >= 0; i--) {
+              navarray[i].setAttribute(
+                "style",
+                "transform:translateX(" +
+                  w +
+                  "px); transition-delay:" +
+                  rate +
+                  "s"
+              );
+              rate += 0.05;
+            }
+          }
+          // regbtn.setAttribute("style", "opacity:0;display:none");
+        }
+      };
+
+      const clsNav = () => {
+        var sidebar = document.querySelector(".sidebar");
+        var opnBtn = document.querySelector(".opnbtn");
+        opnBtn.setAttribute("style", "visibility: visible");
+        sidebar.setAttribute("style", "width: 0vw");
+      };
+
+      const opnNav = () => {
+        var sidebar = document.querySelector(".sidebar");
+        var opnBtn = document.querySelector(".opnbtn");
+        opnBtn.setAttribute("style", "visibility: hidden");
+        sidebar.setAttribute("style", "width: 100vw");
+      };
+    </script>
+  </body>
+</html>

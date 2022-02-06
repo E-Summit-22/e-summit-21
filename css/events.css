@@ -1,0 +1,122 @@
+#events {
+  position: relative;
+  padding-top: 2rem;
+  /* background: linear-gradient(rgb(5, 3, 92), rgba(5, 3, 92, 0.0) 90%); */
+    background-color: rgb(0, 0, 0);
+  /* background-image: linear-gradient(#bad3ff, #787ff6); */
+  /* background: url(../images/bg.jpg); */
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+}
+#event-rows {
+  height: 280px;
+}
+
+#guest-talks,
+#competitions,
+#workshops,
+#innovation-expo,
+#investors-drive,
+#internship-fair {
+  transition: all 0.3s ease-in;
+  border: 0px solid black;
+  z-index: 4;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 2px black;
+}
+
+[class*="col-"] {
+  transition: all 0.3s ease-in-out;
+}
+
+#c-text {
+  position: absolute;
+  height: 100%;
+  border: 0px;
+  line-height: 20px;
+}
+
+#c-cover {
+  /* background-color: rgb(224, 167, 120); */
+  /* background-image: linear-gradient(to right, #0d6efd, #67a2fa) !important; */
+  /* background-image: linear-gradient(
+    to bottom right,
+    #000c66,
+    #0000ff
+  ) !important; */
+  border-radius: 20px;
+  background-image: linear-gradient(
+270deg
+,#02203c 50%,#15314b 0) !important;
+}
+
+#guest-talks #event-rows #c-cover,
+#workshops #event-rows #c-cover,
+#investors-drive #event-rows #c-cover {
+  z-index: 2;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#competitions #event-rows #c-cover,
+#innovation-expo #event-rows #c-cover,
+#internship-fair #event-rows #c-cover {
+  z-index: 2;
+}
+
+#competitions #event-rows #c-text,
+#innovation-expo #event-rows #c-text,
+#internship-fair #event-rows #c-text {
+  right: 0;
+}
+.event-graphic {
+  position: absolute;
+  height: 70%;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#events {
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  z-index: 0;
+  /* transform: translateY(-50%); */
+  height: 130%;
+  top: 0;
+  opacity: 0.5;
+  z-index: 0;
+  top: -10%;
+}
+
+#c-text .card-body {
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  /* padding-left: 10px;
+  padding-right: 0px; */
+  /* justify-content: center; */
+}
+
+/* .card-text {
+  height: 100%;
+} */
+
+#guest-talks #event-rows #c-text .card-body,
+#workshops #event-rows #c-text .card-body,
+#investors-drive #event-rows #c-text .card-body {
+  padding-right: 0px;
+}
+
+#competitions #event-rows #c-text .card-body,
+#innovation-expo #event-rows #c-text .card-body,
+#internship-fair #event-rows #c-text .card-body {
+  padding-left: 0px;
+}

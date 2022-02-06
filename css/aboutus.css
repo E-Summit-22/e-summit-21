@@ -1,0 +1,99 @@
+.aboutus {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* text-align:; */
+  min-height: 100vh;
+  font-size: 19px;
+  padding: 70px 0px 200px 0px;
+  /* background-color: rgb(8, 5, 92); */
+  background: linear-gradient(rgb(8, 5, 92) 70%, rgb(30, 26, 151));
+  color: #fff;
+
+  align-items: center;
+}
+
+.inner::-webkit-scrollbar {
+  display: none;
+}
+
+#logo-icon .icon {
+  width: 100%;
+  padding: 20px;
+  display: none;
+  height: 100%;
+}
+
+#logo-icon .icon svg {
+  position: sticky;
+  top: 100px;
+}
+
+#logo-icon .icon path {
+  fill: transparent;
+  stroke-width: 30;
+  stroke: #31e8ff;
+  stroke-dasharray: 16040;
+  /* stroke-dashoffset: 0; */
+  stroke-dashoffset: 16040;
+
+  animation: animate-heart 1500ms linear forwards;
+}
+@keyframes animate-heart {
+  0% {
+    stroke-dashoffset: 16040;
+  }
+  100% {
+    stroke-dashoffset: 32080;
+  }
+}
+
+.custom-shape-divider-bottom-1614087482 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1614087482 svg {
+  position: relative;
+  display: block;
+  width: calc(139% + 1.3px);
+  height: 101px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1614087482 .shape-fill {
+  fill: rgb(4, 1, 49);
+}
+
+.about-graphic {
+  position: absolute;
+  height: 70%;
+  left: 0;
+  opacity: 0.6;
+}
+.about-graphic2 {
+  position: absolute;
+  right: 0;
+  height: 70%;
+  opacity: 0.5;
+}
+.speaker-graphic {
+  position: absolute;
+  height: 80%;
+  opacity: 0.8;
+}
+@keyframes moveright {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateX(0%);
+  }
+}

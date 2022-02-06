@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+<link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <script src="scripts/events.js"></script>
+    <script src="scripts/competition.js"></script>
+
+    <title>E SUMMIT</title>
+
+    <link rel="icon" href="images/Logo_outline.png" type="image/gif" sizes="16x16" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/theme.css" /> -->
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- <link rel="stylesheet" href="swiper.min.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/workshops.css" />
+    <!-- <link href="scrollspy.css" rel="stylesheet" /> -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/navbarResponsive.css" />
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .sortable-handler {
+            touch-action: none;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("wheel", { passive: false });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/da09e1c8d7.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar, #navbar-responsive" data-offset="300"
+    onscroll="changeNavbar(0);">
+
+    <div id="header">
+        <nav id="navbar" class="navbar navbar-expand bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html#header"><img src="images/Logo_outline.png" alt="" /></a>
+                <div class="main-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#header">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./workshops.html">Workshops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./competitions.html">Competitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./internFair.html">Internfair</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              href="#"
+                              data-toggle="modal"
+                              data-target="#mymodal"
+                              >Contact Us</a
+                            >
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav id="navbar-responsive">
+            <div class="sidebar">
+                <!-- <span class="clsbtn"> -->
+                <a href="javascript:void(0)" class="clsbtn btn" onclick="clsNav()">x</a>
+                <!-- </span> -->
+                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link active" href="./workshops.html">Workshops</a>
+                <a class="nav-link" href="./competitions.html">Competitions</a>
+                <a class="nav-link" href="./internFair.html">Internfair</a>
+                <a class="nav-link" href="./team.html">Team</a>
+                <a
+                    class="nav-link"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#mymodal"
+                    >Contact Us</a
+                >
+            </div>
+            <button class="opnbtn btn" onclick="opnNav()">
+                <img src="./images/hamburger-icon"
+                    alt="" /><br /><span></span>
+            </button>
+        </nav>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="mymodal">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+        >
+          <div class="modal-content text-center">
+            <div class="modal-header d-block text-center">
+              <h5 class="modal-title">Contact Us</h5>
+            </div>
+            <div class="modal-body align-items-center">
+              <div id="cont-card" class="text-dark align-items-center">
+                <p>
+                    Sponsorship and Association
+                    <br />
+                    <small><strong>Jaykar&emsp;</strong></small
+                    ><a href="tel:8639208292"
+                      ><small
+                        id="phone"
+                        class="text-primary"
+                        onclick="copyToClipboard(this);"
+                        >91 86392 08292</small
+                      ></a
+                    >
+                  </p>
+                  <p>
+                    Registration
+                    <br />
+                    <small><strong>Bhanu&emsp;</strong> </small
+                    ><a href="tel:7619605060"
+                      ><small
+                        id="phone"
+                        class="text-primary"
+                        onclick="copyToClipboard(this);"
+                        >+91 76196 05060</small
+                      ></a
+                    >
+                  </p>
+                  <p>
+                    For Speaking Opportunities
+                    <br />
+                    <small><strong>Akash Kothapally&emsp;</strong></small
+                    ><a href="tel:8018087510"
+                      ><small
+                        id="phone"
+                        class="text-primary"
+                        onclick="copyToClipboard(this);"
+                        >+91 80180 87510</small
+                      ></a
+                    >
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="workshops" class="container-fluid text-center flex-wrap d-flex justify-content-around">
+        <div class="jumbotron mx-5 text-white">
+            <h1 class="display-4 mt-5"><b>W<small class="fw-normal fs-3">ORKSHOPS</small></b></h1>
+            <p class="lead" style="text-align: justify;font-family: 'Varela Round';">Workshops at E-Summit'21 aim to deliver numerous tips-and-tricks
+                to the attendees in order
+                to achieve various creative,
+                innovative and feasible ideas from daily life problems. They broaden the understanding of attendees of
+                diverse aspects
+                of entrepreneurship starting from idea generation to idea commercialization. It also lays emphasis on
+                how a strong
+                networking in the society/industry can help one to rise to a sustainable business enterprise and help
+                them market the
+                product to a much wider audience. The workshops stand with great benefits to the attendees as they learn
+                how to build a
+                corporate identity and filter out ideas for high growth entrepreneurship via various interactive
+                sessions in these
+                workshops with many distinguished personalities.</p>
+            <!-- <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Register</a>
+            </p> -->
+            <hr class="my-4">
+
+        </div>
+        <div class="row text-white mx-4 row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-4">
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/stockmarket.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Stock Marketing</h5>
+                        <a href="https://dare2compete.com/o/87pgahu?refId=W6yxLjM" class="btn btn-warning text-white">Register</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/webpreneurship.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Webpreneurship</h5>
+                        <a href="https://dare2compete.com/o/x2row6T?refId=W6yxLjM" class="btn btn-warning text-white">Register</a>
+                    </div>
+                </div>
+            </div>
+            -->
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/digitalmarketing.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <a href="https://dare2compete.com/o/kPhtlSF?refId=W6yxLjM" class="btn btn-warning text-white">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/startup.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Legal Aspects of Startups
+</h5>
+                        <a href="https://dare2compete.com/o/2moLM5N?refId=W6yxLjM" class="btn btn-warning text-white">Register</a>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/blockchain.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Blockchain Technology</h5>
+                        <a href="https://dare2compete.com/o/lq3QJap?refId=W6yxLjM" class="btn btn-warning text-white">Register</a>
+                    </div>
+                </div>
+            </div>
+            -->
+            <!--
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/businessanalytics.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Business Analytics</h5>
+                        <a href="https://dare2compete.com/o/Ewmsc6X?refId=W6yxLjM" class="btn btn-warning text-white">Register</a>
+                    </div>
+                </div>
+            </div>
+            -->
+            
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+
+    <footer id="footer" class="bg-dark">
+        <img src="./graphic imgs/contact5.png" alt="" class="foot-graphic">
+        <div id="line-1">
+            <div id="footer-img">
+                <img src="images/Logo_outline.png" />
+            </div>
+            <div id="footer-text" class="text-white">
+                <strong>E-Summit 21</strong>
+                <br />
+                <span style="font-size: 18px">IIT Bhubaneshwar</span>
+            </div>
+        </div>
+        <div id="sm-icons">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/centrepreneurship/" target="_blank"><i class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/centrepreneurship/" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/e-summit-iit-bhubaneswar/" target="_blank"><i
+                            class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UC3gKo28mm66VcJs-vsFggZg" target="_blank"><i
+                            class="fa fa-youtube" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="line-3">
+            <div id="q-links" class="text-white">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./sponsors.html" target="_blank">Sponsors</a></li>
+                    <li>
+                        <a href="https://ca.e-summit-iitbbs.com/" target="_blank"
+                          >CA Page</a
+                        >
+                      </li>
+                      <li><a href="./index.html#events" target="_blank">Events</a></li>
+                      <li>
+                        <a href="./competitions.html" target="_blank">Competitions</a>
+                      </li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+
+</html>

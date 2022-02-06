@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+    <!-- <script src="scripts/events.js"></script> -->
+    <script src="scripts/competition.js"></script>
+
+    <title>E SUMMIT</title>
+
+    <link rel="icon" href="images/Logo_outline.png" type="image/gif" sizes="16x16" />
+     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/theme.css" /> -->
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- <link rel="stylesheet" href="swiper.min.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/contests.css" />
+    <!-- <link href="scrollspy.css" rel="stylesheet" /> -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/navbarResponsive.css" />
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        *{
+            font-family:"Varela Round";
+        }
+
+        .sortable-handler {
+            touch-action: none;
+        }
+        .card{
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("wheel", { passive: false });
+    </script>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+            })
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/da09e1c8d7.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar, #navbar-responsive" data-offset="300" onscroll="changeNavbar(0);">
+
+    <div id="header">
+        <nav id="navbar" class="navbar navbar-expand bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html#header"><img src="images/Logo_outline.png" alt="" /></a>
+                <div class="main-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#header">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./workshops.html">Workshops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./competitions.html">Competitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./internFair.html">Internfair</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              href="#"
+                              data-toggle="modal"
+                              data-target="#mymodal"
+                              >Contact Us</a
+                            >
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav id="navbar-responsive">
+            <div class="sidebar">
+                <!-- <span class="clsbtn"> -->
+                <a href="javascript:void(0)" class="clsbtn btn" onclick="clsNav()">x</a>
+                <!-- </span> -->
+                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link" href="./workshops.html">Workshops</a>
+                <a class="nav-link active" href="./competitions.html">Competitions</a>
+                <a class="nav-link" href="./internFair.html">Internfair</a>
+                <a class="nav-link" href="./team.html">Team</a>
+                <a
+                    class="nav-link"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#mymodal"
+                    >Contact Us</a
+                >
+            </div>
+            <button class="opnbtn btn" onclick="opnNav()">
+                <img src="./images/hamburger-icon"
+                    alt="" /><br /><span></span>
+            </button>
+        </nav>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="mymodal">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+        >
+          <div class="modal-content text-center">
+            <div class="modal-header d-block text-center">
+              <h5 class="modal-title">Contact Us</h5>
+            </div>
+            <div class="modal-body align-items-center">
+              <div id="cont-card" class="text-dark align-items-center">
+                <p>
+                    Sponsorship and Association
+                    <br />
+                    <small><strong>Jaykar&emsp;</strong></small
+                    ><a href="tel:8639208292"
+                      ><small
+                        id="phone"
+                        class="text-primary"
+                        onclick="copyToClipboard(this);"
+                        >91 86392 08292</small
+                      ></a
+                    >
+                  </p>
+                  <p>
+                    Registration
+                    <br />
+                    <small><strong>Bhanu&emsp;</strong> </small
+                    ><a href="tel:7619605060"
+                      ><small
+                        id="phone"
+                        class="text-primary"
+                        onclick="copyToClipboard(this);"
+                        >+91 76196 05060</small
+                      ></a
+                    >
+                  </p>
+                  <p>
+                    For Speaking Opportunities
+                    <br />
+                    <small><strong>Akash Kothapally&emsp;</strong></small
+                    ><a href="tel:8018087510"
+                      ><small
+                        id="phone"
+                        class="text-primary"
+                        onclick="copyToClipboard(this);"
+                        >+91 80180 87510</small
+                      ></a
+                    >
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="competitions" class="container-fluid text-center flex-wrap d-flex justify-content-around">
+
+        <div class="jumbotron mx-5 text-white">
+            <h1 class="display-4 mt-5"><b>C<small class="fw-normal fs-3">OMPETITIONS</small></b></h1>
+            <p class="lead" style="text-align: justify">E-Summit presents a series of mind boggling competitions
+                involving creativity, marketing &
+                managerial skills, team work,
+                business prowess. Register for these competitions to test your mettle and emerge as a champion</p>
+
+
+
+
+            <hr class="my-4">
+        </div>
+        <div class="row text-white mx-4 row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3 row-cols-xl-4">
+
+
+
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/ipl.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">IPL Auction</h5><br />
+                        <p class="card-text">Welcome to the thrill of a live IPL Auction!! Put yourselves into the shoes
+                            of a bidder and build your dream fantasy IPL
+                            team that you always wanted to lift the coveted trophy.</p>
+
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                            Register
+                          </button>
+                          <!-- Modal -->
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">IPL AUCTION</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color:black">Put yourselves into the shoes of a bidder and build your dream fantasy IPL team that you always wanted to lift the coveted trophy.</p>
+                                        <br/>
+                                        <a style="color:black" href="http://www.townscript.com/e/ipl-auction-124114" class="btn btn-warning text-white">Register as IIT BBS student</a>
+                                        <br/><br/>
+                                        <a style="color:black" href="https://dare2compete.com/o/ipl-auction-e-summit-2021-indian-institute-of-technology-iit-bhubaneswar-151323" class="btn btn-warning text-white">Register from other college</a>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                            </div>
+                        <!--Modal-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/iexpo.jpeg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Innovation Expo</h5><br />
+                        <p class="card-text">Do you believe your project/idea is innovative, market feasible and capable
+                            of disruption? Then here is the right
+                            opportunity to prove your mettle!!</p>
+                        
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                                Register
+                              </button>
+                              <!-- Modal -->
+                                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="color:black">INNOVATION EXPO</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p style="color:black">Do you believe your project/idea is innovative, market feasible and capable of disruption? Then here is the right opportunity to prove your mettle!!</p>
+                                            <br/>
+                                            <a style="color:black" href="https://www.townscript.com/e/innovation-expo-432002" class="btn btn-warning text-white">Register as IIT BBS student</a>
+                                            <br/><br/>
+                                            <a style="color:black" href="https://dare2compete.com/o/innovation-expo-e-summit-2021-indian-institute-of-technology-iit-bhubaneswar-151624" class="btn btn-warning text-white">Register from other college</a>
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                    </div>
+                                </div>
+                            <!--Modal-->
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/enigma.jpeg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Enigma: The Case Challenge</h5><br />
+                        <p class="card-text">E-Summit’21 IIT Bhubaneswar presents you with Enigma, the case challenge
+                            competition. This is the competition for those
+                            who have the ability to analyse and come up with a solution to a real-time problem
+                            innovatively.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                                Register
+                              </button>
+                              <!-- Modal -->
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="color:black">ENIGMA</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p style="color:black">This is the competition for those
+                                                who have the ability to analyse and come up with a solution to a real-time problem
+                                                innovatively.</p>
+                                            <br/>
+                                            <a style="color:black" href="https://www.townscript.com/e/esummit21-013202" class="btn btn-warning text-white">Register as IIT BBS student</a>
+                                            <br/><br/>
+                                            <a style="color:black" href="https://dare2compete.com/o/enigma-e-summit-2021-indian-institute-of-technology-iit-bhubaneswar-149709" class="btn btn-warning text-white">Register from other college</a>
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                    </div>
+                                </div>
+                            <!--Modal-->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/stock-wars.jpeg" alt="Card image cap">
+                    </div>
+                    <div class="card-body" style="overflow-y: auto;">
+                        <h5 class="card-title">Stock Wars</h5><br />
+                        <p class="card-text">E SUMMIT’21 is here to announce a virtual trading competition "STOCK WARS" on the platform Stock Market Challenge(DSIJ) app.
+                            Stock Market Challenge app is an online simulation trading app where you create and manage your own portfolio and compete with other players 
+                            in a risk-free environment.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
+                            Register
+                          </button>
+                          <!-- Modal -->
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">STOCK WARS</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color:black">E SUMMIT’21 is here to announce a virtual trading competition "STOCK WARS" on the platform Stock Market Challenge(DSIJ) app.
+                                            Stock Market Challenge app is an online simulation trading app where you create and manage your own portfolio and compete with other players 
+                                            in a risk-free environment. The challengers performances are calculated and ranked vis a vis others. So get ready and participate in the 
+                                            stock wars and win prizes worth 10k.</p>
+                                        <br/>
+                                        <a style="color:black" href="https://www.townscript.com/e/stock-wars-430013" class="btn btn-warning text-white">Register as IIT BBS student</a>
+                                        <br/><br/>
+                                        <a style="color:black" href="https://dare2compete.com/o/stock-wars-e-summit-2021-indian-institute-of-technology-iit-bhubaneswar-152595" class="btn btn-warning text-white">Register from other college</a>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                            </div>
+                        <!--Modal-->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/b-plan.jpeg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">B-Plan</h5><br />
+                        <p class="card-text">It is a Business Plan Making competition designed to encourage new 
+                            innovative business venture plan and allowing the participants to develop their 
+                            entrepreneurial skills and knowledge for developing their business model.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5">
+                            Register
+                          </button>
+                          <!-- Modal -->
+                            <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">B-PLAN</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color:black">It is a Business Plan Making competition designed to encourage new 
+                                            innovative business venture plan and allowing the participants to develop their 
+                                            entrepreneurial skills and knowledge for developing their business model.</p>
+                                        <br/>
+                                        <a style="color:black" href="https://www.townscript.com/e/bplan-031320" class="btn btn-warning text-white">Register as IIT BBS student</a>
+                                        <br/><br/>
+                                        <a style="color:black" href="https://dare2compete.com/o/eC4mjvK?refId=W6yxLjM" class="btn btn-warning text-white">Register from other college</a>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                            </div>
+                        <!--Modal-->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/biz-quiz.jpeg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Biz Quiz</h5><br />
+                        <p class="card-text">This year esummit is before you with its Biz Quiz to take you through an enchanting
+                            journey to the world of business. With a combination of mind blogging
+                            questions, core concepts and some really exciting rounds, Biz Quiz promises to
+                            be a challenging test of your intellect!
+                            </p>
+                        
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal8">
+                                Register
+                              </button>
+                              <!-- Modal -->
+                                <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="color:black">BIZ QUIZ</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p style="color:black">This year esummit is before you with its Biz Quiz to take you through an enchanting
+                                                journey to the world of business. With a combination of mind blogging
+                                                questions, core concepts and some really exciting rounds, Biz Quiz promises to
+                                                be a challenging test of your intellect!
+                                                </p>
+                                            <br/>
+                                            <a style="color:black" href="https://www.townscript.com/e/-bizquiz-242124" class="btn btn-warning text-white">Register as IIT BBS student</a>
+                                            <br/><br/>
+                                            <a style="color:black" href="https://dare2compete.com/o/Hkjq6Bb?refId=W6yxLjM" class="btn btn-warning text-white">Register from other college</a>
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                    </div>
+                                </div>
+                            <!--Modal-->
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/kreo.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kreo : The Poster Making Competition</h5><br />
+                        <p class="card-text">E-Summit’21 IIT Bhubaneswar presents you with Kreo. This is a poster making competition of 2 rounds. Both rounds will be held online.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal9">
+                                Register
+                              </button>
+                              <!-- Modal -->
+                                <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="color:black">KREO</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p style="color:black">This is a poster making competition of 2 rounds. Both rounds will be held online.</p>
+                                            <br/>
+                                            <a style="color:black" href="                            https://www.townscript.com/e/kreo-324300
+                        " class="btn btn-warning text-white" >Register as IIT BBS student</a>
+                                            <br/><br/>
+                                            <a style="color:black" href="https://dare2compete.com/o/PwSNEOR?refId=trH9EI3" class="btn btn-warning text-white">Register from other college</a>
+                                           
+                                        </div>
+                                       
+                                    </div>
+                                    </div>
+                                </div>
+                            <!--Modal-->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/insignia.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body" style="overflow-y: auto;">
+                        <h5 class="card-title">Insignia</h5><br />
+                        <p class="card-text">E SUMMIT’21 is here to announce a Insignia. This is a logo designing competition of 2 rounds. Both rounds will be held online.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa20">
+                            Register
+                          </button>
+                          <!-- Modal -->
+                            <div class="modal fade" id="exampleModa20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">INSIGNIA</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color:black">This is a logo designing competition of 2 rounds. Both rounds will be held online.</p>
+                                        <br/>
+                                        <a style="color:black" href="https://www.townscript.com/e/insignia-230010" class="btn btn-warning text-white" disabled>Register as IIT BBS student</a>
+                                        <br/><br/>
+                                        <a style="color:black" href="https://dare2compete.com/o/wkt0rYK?refId=W6yxLjM" class="btn btn-warning text-white">Register from other college</a>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                            </div>
+                        <!--Modal-->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card mb-3">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="images/epigrama.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Epigramma</h5><br />
+                        <p class="card-text">Epigramma is a tagline/slogan making competition of 2 rounds. Round 1 is theme-based. Both rounds will be held online.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa21">
+                            Register
+                          </button>
+                          <!-- Modal -->
+                            <div class="modal fade" id="exampleModa21" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">EPIGRAMMA</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color:black">Epigramma is a tagline/slogan making competition of 2 rounds. Round 1 is theme-based. Both rounds will be held online.</p>
+                                        <br/>
+                                        <a style="color:black" href="                            https://www.townscript.com/e/epigramma-021203
+                        " class="btn btn-warning text-white" disabled>Register as IIT BBS student</a>
+                                        <br/><br/>
+                                        <a style="color:black" href="https://dare2compete.com/o/JYLy0Dh?refId=W6yxLjM" class="btn btn-warning text-white">Register from other college</a>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                            </div>
+                        <!--Modal-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="bg-dark">
+        <img src="./graphic imgs/contact5.png" alt="" class="foot-graphic">
+        <div id="line-1">
+            <div id="footer-img">
+                <img src="images/Logo_outline.png" />
+            </div>
+            <div id="footer-text" class="text-white">
+                <strong>E-Summit 21</strong>
+                <br />
+                <span style="font-size: 18px">IIT Bhubaneshwar</span>
+            </div>
+        </div>
+        <div id="sm-icons">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/centrepreneurship/" target="_blank"><i class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/centrepreneurship/" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/e-summit-iit-bhubaneswar/" target="_blank"><i
+                            class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UC3gKo28mm66VcJs-vsFggZg" target="_blank"><i
+                            class="fa fa-youtube" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="line-3">
+            <div id="q-links" class="text-white">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./sponsors.html" target="_blank">Sponsors</a></li>
+                    <li>
+                        <a href="https://ca.e-summit-iitbbs.com/" target="_blank"
+                          >CA Page</a
+                        >
+                      </li>
+                    <li><a href="./index.html#events" target="_blank">Events</a></li>
+                    <li><a href="#">Competitions</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+
+</html>

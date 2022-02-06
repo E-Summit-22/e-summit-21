@@ -1,0 +1,103 @@
+/* body {
+  margin: 0;
+} */
+#main {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-image: url("../images/Logo_outline_load.png");
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  /* backdrop-filter: blur(4px); */
+
+  transition: all 3s ease-in;
+
+  perspective: 500px;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 500px;
+}
+
+.banner .blocks {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 5vw;
+  height: 5vh;
+
+  animation: animateL 2s ease-in-out forwards;
+
+  animation-delay: 2s;
+}
+
+@keyframes animateL {
+  0% {
+    transform: translateZ(2000px);
+
+    background: url("../images/Logo_load.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: translateZ(0px);
+
+    background: url("../images/Logo_load.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateZ(0px);
+
+    /* background: url("../images/Logo_load.png"); */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: translateZ(20px);
+
+    /* background: url("../images/Logo_load.png"); */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  100% {
+    transform: translateZ(0px);
+
+    /* background: url("../images/Logo_load.png"); */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+    border: 0px solid rgba(255, 255, 255, 0.2);
+  }
+}

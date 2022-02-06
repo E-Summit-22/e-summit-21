@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1A7AEF" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS js -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="scripts/events.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/header.js"></script>
+    <title>E SUMMIT</title>
+
+    <link
+      rel="icon"
+      href="images/Logo_outline.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/aboutus.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="swiper.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/speakers.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="css/navbarResponsive.css"
+    />
+
+    <style>
+      body {
+        font-family: "Varela Round";
+        overflow-x: hidden;
+        background-color: rgb(4, 1, 49);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      p{
+        font-family: "Varela Round";
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  
+      
+      
+
+      .sortable-handler {
+        touch-action: none;
+      }
+      
+      .custom-shape-divider-bottom-1615715615 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1615715615 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 500px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1615715615 .shape-fill {
+    fill:rgb(8, 5, 92);
+}
+
+@media (max-width:760px){
+  .custom-shape-divider-bottom-1615715615 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+}
+
+
+
+
+    </style>
+
+    <script>
+      window.addEventListener("wheel", { passive: false });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/da09e1c8d7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    data-spy="scroll"
+    data-target=".navbar, #navbar-responsive"
+    data-offset="300"
+    onscroll="changeUrl();mimicScrollspy();changeNavbar(0);"
+  >
+    <div id="main">
+      <div class="banner">
+        <div class="blocks"></div>
+      </div>
+    </div>
+
+    <script src="scripts/loader.js"></script>
+
+    <div>
+      <div id="header">
+        <nav id="navbar" class="navbar navbar-expand bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#header"
+              ><img src="images/Logo_outline.png" alt=""
+            /></a>
+            <div class="main-nav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#header">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#aboutus">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#theme">Theme</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#speakers">Speakers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#events">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#mymodal"
+                    >Contact Us</a
+                  >
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <nav id="navbar-responsive">
+          <div class="sidebar">
+            <!-- <span class="clsbtn"> -->
+            <a href="javascript:void(0)" class="clsbtn btn" onclick="clsNav()"
+              >x</a
+            >
+            <!-- </span> -->
+            <a class="nav-link active" href="#header">Home</a>
+            <a class="nav-link" href="#aboutus">About</a>
+            <a class="nav-link" href="#theme">Theme</a>
+            <a class="nav-link" href="#speakers">Speakers</a>
+            <a class="nav-link" href="#events">Events</a>
+            <a class="nav-link" href="./team.html">Team</a>
+            <a
+              class="nav-link"
+              href="#"
+              data-toggle="modal"
+              data-target="#mymodal"
+              >Contact Us</a
+            >
+          </div>
+          <button class="opnbtn btn" onclick="opnNav()">
+            <img src="./images/hamburger-icon" alt="" /><br /><span></span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="modal fade" role="dialog" tabindex="-1" id="mymodal">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+        >
+          <div class="modal-content text-center">
+            <div class="modal-header d-block text-center">
+              <h5 class="modal-title">Contact Us</h5>
+            </div>
+            <div class="modal-body align-items-center">
+              <div id="cont-card" class="text-dark align-items-center">
+                <p>
+                  Sponsorship and Association
+                  <br />
+                  <small><strong>Jaykar&emsp;</strong></small
+                  ><a href="tel:8639208292"
+                    ><small
+                      id="phone"
+                      class="text-primary"
+                      onclick="copyToClipboard(this);"
+                      >91 86392 08292</small
+                    ></a
+                  >
+                </p>
+                <p>
+                  Registration
+                  <br />
+                  <small><strong>Bhanu&emsp;</strong> </small
+                  ><a href="tel:7619605060"
+                    ><small
+                      id="phone"
+                      class="text-primary"
+                      onclick="copyToClipboard(this);"
+                      >+91 76196 05060</small
+                    ></a
+                  >
+                </p>
+                <p>
+                  For Speaking Opportunities
+                  <br />
+                  <small><strong>Akash Kothapally&emsp;</strong></small
+                  ><a href="tel:8018087510"
+                    ><small
+                      id="phone"
+                      class="text-primary"
+                      onclick="copyToClipboard(this);"
+                      >+91 80180 87510</small
+                    ></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" role="dialog" tabindex="-1" id="mymodalvideo">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+        >
+          <div class="modal-content text-center">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                id="cartoonVideo"
+                class="embed-responsive-item"
+                style="width: 100%; height: 50vh; padding: 0; margin: 0"
+                src="https://www.youtube.com/embed/iVvSRnN53AY"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).on("hide.bs.modal", "#mymodalvideo", function () {
+          // console.log("pausing");
+          $("iframe").attr("src", $("iframe").attr("src"));
+        });
+      </script>
+    <div class="modal fade" role="dialog" tabindex="-1" id="mymodal90">
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+        >
+          <div class="modal-content text-center">
+            <div class="modal-body align-items-center">
+              <a style="color:black" href="https://www.townscript.com/o/esummit2021-112222" class="btn btn-warning text-white">Register as IIT BBS student</a>
+              <br/>
+              <br/>
+              <a style="color:black" href="https://dare2compete.com/f/e-summit-2021-indian-institute-of-technology-iit-bhubaneswar-9856" class="btn btn-warning text-white">Register from other college</a>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="gap-1" style="height: 50px"></div> -->
+
+      <div class="header-content">
+        
+     
+
+
+        <div id="filter-layer">
+          <div class="custom-shape-divider-bottom-1615715615">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        </div>
+        <div class="container">
+          <!-- <div class="diy-slideshow"> -->
+          <!-- <figure class="show">
+          <img src="/img/header/1.jpg" width="100%" />
+        </figure>
+        <figure>
+          <img src="/img/header/2.jpg" width="100%" />
+        </figure>
+        <figure>
+          <img src="/img/header/3.jpg" width="100%" />
+        </figure>
+        <figure>
+          <img src="/img/header/4.jpg" width="100%" />
+        </figure>
+        <figure>
+          <img src="/img/header/5.jpg" width="100%" />
+        </figure>
+        <figure>
+          <img src="/img/header/6.jpg" width="100%" />
+        </figure>
+        <figure>
+          <img src="/img/header/7.jpg" width="100%" />
+        </figure>
+        <figure>
+          <img src="/img/header/8.jpg" width="100%" />
+        </figure> -->
+          <!-- <div id="logo-three-animation">
+            <span class="circle-animation1"></span>
+            <span class="circle-animation2"></span>
+            <span class="circle-animation3"></span>
+            <img src="images/logo_main.png" class="header-image" alt="" />
+          </div> -->
+          <!-- </div> -->
+          <div class="header-text">
+            <!--<h1>E SUMMIT - 21</h1>-->
+             <img src="/images/Untitled-3.png" style="width:500px;height:170px;"/>
+            <h2 style="color: antiquewhite"></h2>
+            <a
+              href="#"
+              class="btn btn-white btn-animate"
+              style="position: relative; width: 220px"
+              data-toggle="modal"
+              data-target="#mymodal90"
+              >REGISTER NOW</a
+            >
+            <!--<a-->
+            <!--  href="https://www.townscript.com/o/esummit2021-112222"-->
+            <!--  class="btn btn-white btn-animate"-->
+            <!--  style="position: relative; width: 200px"-->
+            <!--  target="_blank"-->
+            <!--  >IITBBS students</a-->
+            <!-- -->
+            
+          </div>
+          
+          <!-- <div class="header-img">
+            <img src="./images/Logo_load.png" alt="" />
+          </div> -->
+          <div class="header-img">
+            <lottie-player 
+  src="https://assets3.lottiefiles.com/packages/lf20_teubekfl.json" style="width:100%; height:100%;" background="transparent"  speed="1"  loop autoplay >
+</lottie-player>
+          </div>
+
+        </div>
+      </div>
+
+      <div
+        id="aboutus"
+        class="aboutus"
+        style="flex-flow: column; margin: auto; height: auto"
+      >
+        <img src="./graphic imgs/about1.png" alt="" class="about-graphic" />
+        <img src="./graphic imgs/about2.png" alt="" class="about-graphic2" />
+        <div class="row">
+          <div class="col-12">
+            <h1 style="color: white; text-align: center" data-aos="zoom-in-up">
+              A<small class="fw-normal fs-3">BOUT US</small>
+            </h1>
+          </div>
+        </div>
+
+        <div
+          class="container row no-gutters d-flex"
+          style="height: 100%; flex: 1"
+        >
+          <div id="logo-icon" class="col-md-5 col-xs-12">
+            <div class="icon">
+              <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="200 200 640.000000 600.000000"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <g
+                  transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
+                  fill="#000000"
+                  stroke="none"
+                >
+                  <filter
+                    id="dropshadow"
+                    x="0"
+                    y="0"
+                    width="1000%"
+                    height="1000%"
+                  >
+                    <feDropShadow
+                      dx="0"
+                      dy="0"
+                      stdDeviation="50"
+                      flood-color="#fff"
+                      flood-opacity="1"
+                    />
+                  </filter>
+                  <path
+                    class="icon-path"
+                    style="filter: url(#dropshadow)"
+                    d="M6400 6464 c-410 -134 -863 -283 -1007 -330 l-263 -85 0 -286 c0
+-256 2 -285 16 -279 8 3 471 155 1027 338 557 182 1014 333 1016 334 2 2 0
+127 -4 279 -6 245 -9 275 -24 274 -9 0 -351 -110 -761 -245z"
+                  />
+                  <path
+                    class="icon-path"
+                    style="filter: url(#dropshadow)"
+                    d="M3993 6353 l-1003 -327 0 -1293 c0 -711 3 -1293 8 -1293 4 -1 465
+      151 1025 337 l1017 337 0 282 0 281 -802 -263 -803 -263 -3 212 c-1 117 0 222
+      3 234 4 19 103 54 795 285 l790 263 0 247 c0 135 3 253 6 262 4 12 0 16 -15
+      16 -17 0 -1474 -459 -1547 -487 -12 -4 -14 34 -14 214 l0 219 708 229 c389
+      126 742 239 785 253 l77 24 0 279 c0 217 -3 279 -12 279 -7 -1 -464 -148
+      -1015 -327z"
+                  />
+                  <path
+                    class="icon-path"
+                    style="filter: url(#dropshadow)"
+                    d="M6139 5353 l-1005 -327 -1 -278 c0 -153 3 -281 7 -283 6 -4 1354 454
+                    1473 500 16 7 17 -6 15 -221 l-3 -228 -742 -245 -741 -245 -2 -121 c-1 -177
+                    11 -425 22 -425 13 0 2019 658 2025 664 3 3 2 350 -2 771 -7 697 -9 765 -24
+                    764 -9 0 -468 -147 -1022 -326z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="inner col-md-6 col-xs-12">
+            <div>
+              <br />
+              <p style="text-align: justify " data-aos="zoom-in-up">
+                &emsp;&emsp;&emsp;E-Summit is a three day event, started as an
+                initiative of the Entrepreneurship Cell of IIT Bhubaneswar. The
+                Summit seeks to facilitate interaction amonag industrialists,
+                funding agencies, seasoned and upcoming entrepreneurs, academia
+                and students of the participating institutes.
+              </p>
+              <p style="text-align: justify" data-aos="zoom-in-up">
+                &emsp;&emsp;&emsp;E-Summit’21 will include a gamut of activities
+                such as entrepreneurial guest lectures, workshops and panel
+                discussions with experts, startup internship fair and investors
+                drive. E-summit, as a culture of IIT Bhubaneswar, has proved its
+                worth in depleting the Chasm that exists between
+                Entrepreneurship and management. It is the stage for future
+                Industry leaders and Entrepreneurs to exercise their skills.
+              </p>
+
+              <p
+                style="text-align: center; z-index: 3; position: relative"
+                data-aos="fade-down"
+              >
+                <b>"Where Investors Meets Innovators"</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="position: relative">
+        <div class="custom-shape-divider-bottom-1614087482">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Theme -->
+      <div id="theme" class="theme">
+        <div class="container pl-5 pr-5">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h1 style="color: white" data-aos="zoom-in-down">
+            T<small class="fw-normal fs-3">HEME</small>
+          </h1>
+          <br />
+          <h2 style="color: white" data-aos="fade-up">Reign of Resilience</h2>
+          <div class="row align-items-center">
+            <div
+              class="col-lg-12 justify-content-center align-items-center pl-5 pr-5"
+            >
+              <br />
+              <p
+                style="font-size: 18px; text-align: justify"
+                data-aos="zoom-in-up"
+              >
+                &emsp;&emsp;&emsp;It has been observed that recessions and
+                epidemics wipe out many small scale industries and startups. The
+                outbreak of the COVID - 19 pandemic is another such depression
+                that disrupted the global economy and affected entrepre neurs in
+                unprecedented ways. However, resilience has emerged as a very
+                important entrepreneurial skill in the wake of this unfortunate
+                crisis. Resilience is required for a company to adapt and grow
+                stronger in the face of challenges, and that is best shown by
+                the new and creative methods adopted by various entrepreneurs
+                worldwide to tackle this pandemic
+              </p>
+            </div>
+
+            <div
+              class="col-lg-12 justify-content-center align-items-center pl-5 pr-5"
+            >
+              <p
+                style="font-size: 18px; text-align: justify"
+                data-aos="zoom-in-up"
+              >
+                &emsp;&emsp;&emsp; We at E Summit believe that this trait of an
+                entrepreneur should be celebrated. Our intention in having this
+                theme is to honor the startups which showed a great amount of
+                resilience during these tough times as well as promote this
+                quality among young students of the nation.
+              </p>
+            </div>
+
+            <div
+              class="col-lg-12 justify-content-center align-items-center"
+              data-aos="zoom-in-up"
+            >
+              <div class="row align-items-center">
+                <div
+                  class="button col-lg-12 align-items-center justify-content-center d-flex"
+                >
+                  <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#mymodalvideo"
+                    style="cursor: pointer; text-decoration: none; color: white"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    PLAY
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Speakers -->
+      <div id="speakers" class="swiper-container">
+        <!-- <img src="./graphic imgs/speakers2.png" alt="" class="speaker-graphic"> -->
+        <h1 style="text-align: center" data-aos="zoom-out-down">
+          O<small class="fw-normal fs-3">UR SPEAKERS</small>
+        </h1>
+        <br /><br />
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            style="background-image: url('img/speakers/s1.jpg')"
+          >
+            <div class="info">
+              <h5>
+                Mrs. Anisha Motwani<br />
+                <span>Founder and Director, STROM the NORM</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('img/speakers/s2.jpg')"
+          >
+            <div class="info">
+              <h5>
+                Mrs. Kiran Bedi<br />
+                <span style="line-height: 1px"
+                  >First female IPS officer, Former Lieutenant Governor of
+                  Puducherry</span
+                >
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s3.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Sidharth Sogani<br />
+                <span>CEO - CREBACO Global Inc</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s4.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Shivam Thakral<br />
+                <span>CEO & Co-Founder BuyUcoin</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s5.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Anil Lulla<br />
+                <span>CEO & Co-Founder BuyUcoin</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s6.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Raj Chowdhury<br />
+                <span>Managing Director, HashCash Consultants</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s7.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Prof. Vivek Polshettiwar<br />
+                <span>Associate Professor, TIFR</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s8.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Dr. Sivapriya Kirubakaran<br />
+                <span>Associate Professor, IIT Gandhinagar</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s9.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Vinayak Nath<br />
+                <span>Serial Entrepreneur | TEDx Speaker</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s10.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Sanjay Jesrani<br />
+                <span>Founder & CEO, Go North Ventures</span>
+              </h5>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url(img/speakers/s11.jpg)"
+          >
+            <div class="info">
+              <h5>
+                Shashank Randev<br />
+                <span>Founder VC at 100X.VC</span>
+              </h5>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <div class="events-curve">
+        <div style="position: relative">
+          <div
+            class="custom-shape-divider-bottom-1614148560"
+            style="z-index: 1"
+          >
+          </div>
+        </div>
+        <!-- Events -->
+        <div id="events" class="text-center pb-5">
+          <div class="flex-wrap container d-flex justify-content-around p-5">
+            <!--<img-->
+              <!--src="./graphic imgs/events5.png"-->
+            <!--  alt=""-->
+            <!--  class="event-graphic"-->
+            <!--/>-->
+
+            <div
+              style="width: 100%; z-index: 5; color: white"
+              data-aos="fade-down"
+            >
+              <p class="fs-1">E<small class="fw-normal fs-3">VENTS</small></p>
+              <br />
+            </div>
+            <div
+              id="guest-talks"
+              onmouseover="elevate(this)"
+              onmouseout="lower(this)"
+              class="mb-3 card"
+              style="width: 350px"
+              data-aos="flip-left"
+            >
+              <div id="event-rows" class="row no-gutters">
+                <div id="c-text" class="col-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Hear from the experienced!! Learn what the industry
+                      experts want to say. Dive into the entrepreneurial world
+                      with our 'Guest Talks'
+                    </p>
+                    <a class="btn btn-info text-white" href="http://bit.ly/GuestTalksandConclaves"
+                      >REGISTER</a
+                    >
+                  </div>
+                </div>
+                <div id="c-cover" class="col-12 d-flex">
+                  <div
+                    class="text-white h-100 w-100 d-flex justify-content-center align-items-center"
+                  >
+                    <h4>Guest<br />Talks</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mb-3 card"
+              id="competitions"
+              style="width: 350px"
+              onmouseover="elevate(this)"
+              onmouseout="lower(this)"
+              data-aos="flip-right"
+            >
+              <div id="event-rows" class="row no-gutters">
+                <div id="c-text" class="col-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text">
+                      Experience the most stimulating competitions of
+                      E-Summit'21. Outplay your competitors and win exciting
+                      prizes and goodies
+                    </p>
+                    <a
+                      class="btn btn-info text-white"
+                      href="./competitions.html"
+                      target="_blank"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+                <div id="c-cover" class="col-12 d-flex">
+                  <div
+                    class="text-white h-100 w-100 d-flex justify-content-center align-items-center"
+                  >
+                    <h4>Competitions</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mb-3 card"
+              id="workshops"
+              style="width: 350px"
+              onmouseover="elevate(this)"
+              onmouseout="lower(this)"
+              data-aos="flip-left"
+            >
+              <div id="event-rows" class="row no-gutters">
+                <div id="c-text" class="col-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text">
+                      Explore and develop&nbsp;latest entrepreneurial and
+                      technology skills to excel in this competitive world
+                      through our Workshops
+                    </p>
+                    <a
+                      class="btn btn-info text-white"
+                      href="./workshops.html"
+                      target="_blank"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+                <div id="c-cover" class="col-12 d-flex">
+                  <div
+                    class="text-white h-100 w-100 d-flex justify-content-center align-items-center"
+                  >
+                    <h4>Workshops</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mb-3 card"
+              id="innovation-expo"
+              style="width: 350px"
+              onmouseover="elevate(this)"
+              onmouseout="lower(this)"
+              data-aos="flip-right"
+            >
+              <div id="event-rows" class="row no-gutters">
+                <div id="c-cover" class="col-12 d-flex">
+                  <div
+                    class="text-white h-100 w-100 d-flex justify-content-center align-items-center"
+                  >
+                    <h4>Innovation<br />Expo</h4>
+                  </div>
+                </div>
+                <div id="c-text" class="col-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text">
+                      An event in which you can showcase your innovative project
+                      or ideas as exhibit and win exciting prizes From a Project
+                      to a StartUp,the journey begins here!
+                    </p>
+                    <a
+                      class="btn btn-info text-white"
+                      href="./competitions.html"
+                      target="_blank"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mb-3 card"
+              id="investors-drive"
+              style="width: 350px"
+              onmouseover="elevate(this)"
+              onmouseout="lower(this)"
+              data-aos="flip-left"
+            >
+              <div id="event-rows" class="row no-gutters">
+                <div id="c-text" class="col-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text">
+                      We present you Investors drive, a one stop solution to all
+                      start-ups that are in need of funding and mentoring.
+                    </p>
+                    <a
+                      class="btn btn-info text-white"
+                      href="https://dare2compete.com/o/V6kuAI4?refId=W6yxLjM"
+                      >Register Now</a
+                    >
+                  </div>
+                </div>
+                <div id="c-cover" class="col-12 d-flex">
+                  <div
+                    class="text-white h-100 w-100 d-flex justify-content-center align-items-center"
+                  >
+                    <h4>Invest<br />Up</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mb-3 card"
+              id="internship-fair"
+              style="width: 350px"
+              onmouseover="elevate(this)"
+              onmouseout="lower(this)"
+              data-aos="flip-right"
+            >
+              <div id="event-rows" class="row no-gutters">
+                <div id="c-cover" class="col-12 d-flex">
+                  <div
+                    class="text-white h-100 w-100 d-flex justify-content-center align-items-center"
+                  >
+                    <h4>Internship<br />Fair</h4>
+                  </div>
+                </div>
+                <div id="c-text" class="col-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text">
+                      Are you looking for an internship and keen about working
+                      in a startup? Then this internship fair is for you.
+                    </p>
+                    <a
+                      class="btn btn-info text-white"
+                      href="./internFair.html"
+                      target="_blank"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer" class="bg-dark">
+        <div class="container">
+          <img src="./graphic imgs/contact5.png" alt="" class="foot-graphic" />
+          <div id="line-1">
+            <div id="footer-img" data-aos="zoom-out-up">
+              <img src="images/Logo_outline.png" />
+            </div>
+            <div id="footer-text" class="text-white" data-aos="zoom-out-up">
+              <strong>E-Summit 21</strong>
+              <br />
+              <span style="font-size: 18px">IIT Bhubaneshwar</span>
+            </div>
+          </div>
+          <div id="sm-icons">
+            <ul>
+              <li data-aos="fade-up">
+                <a
+                  href="https://www.facebook.com/centrepreneurship/"
+                  target="_blank"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li data-aos="fade-up">
+                <a
+                  href="https://www.instagram.com/centrepreneurship/"
+                  target="_blank"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li data-aos="fade-up">
+                <a
+                  href="https://www.linkedin.com/company/e-summit-iit-bhubaneswar/"
+                  target="_blank"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li data-aos="fade-up">
+                <a
+                  href="https://www.youtube.com/channel/UC3gKo28mm66VcJs-vsFggZg"
+                  target="_blank"
+                  ><i class="fa fa-youtube" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div id="line-3">
+            <div id="q-links" class="text-white">
+              <h4 data-aos="fade-up">Quick Links</h4>
+              <ul>
+                <li><a href="./sponsors.html" target="_blank">Sponsors</a></li>
+                <li>
+                  <a href="https://ca.e-summit-iitbbs.com/" target="_blank"
+                    >CA Page</a
+                  >
+                </li>
+                <li><a href="#events">Events</a></li>
+                <li>
+                  <a href="./competitions.html" target="_blank">Competitions</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div id="cont-card" class="text-white align-items-center">
+              <p style="line-height: 18px">
+                Sponsorship and Association
+                <br />
+                <small><strong>Shahid</strong> +91 85559 59443</small>
+              </p>
+              <p style="line-height: 18px">
+                Registration
+                <br />
+                <small><strong>Jagadeesh</strong> +91 90527 99427</small>
+              </p>
+              <p style="line-height: 18px">
+                For Speaking Opportunities
+                <br />
+                <small><strong>Karthik</strong> +91 83097 23356</small>
+              </p>
+            </div> -->
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 700,
+          modifier: 1,
+          slideShadows: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        initialSlide: 6,
+        // loop: true,
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   // dynamicBullets: true,
+        //   renderBullet: function (index, className) {
+        //     return (
+        //       '<span class="' +
+        //       className +
+        //       '" style="width:20px; height:2px; border-radius:0px"></span>'
+        //     );
+        //   },
+        // },
+      });
+    </script>
+
+    <!-- <script src="skrollr.js"></script>
+    <script type="text/javascript">
+      var s = skrollr.init();
+    </script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+
+<script>
+  LottieInteractivity.create({
+      mode:"scroll",
+      player: "#fourthLottie",
+      actions: [
+          {
+              visibility:[0, 0.2,],
+              type: "stop",
+              frames: [0]
+          },
+          {
+              visibility:[0.2,0.45],
+              type: "seek",
+              frames: [0, 62.5]
+          },
+          {
+              visibility:[0.45,1.0],
+              type: "loop",
+              frames: [62.5, 125]
+          }
+      ]
+  });
+  </script>
+
+  </body>
+</html>
